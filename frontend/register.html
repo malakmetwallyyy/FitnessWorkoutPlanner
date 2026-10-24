@@ -23,20 +23,20 @@
         <form class="space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Full Name</label>
-                    <input type="text" placeholder="John Doe" class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <label class="block text-sm font-semibold mb-2" for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe" required class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Date of Birth</label>
-                    <input type="date" class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <label class="block text-sm font-semibold mb-2" for="dob">Date of Birth</label>
+                    <input type="date" id="dob" required class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                 </div>
             </div>
 
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Gender</label>
-                    <select class="w-full bg-slate-800 border border-slate-600 text-slate-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <label class="block text-sm font-semibold mb-2" for="gender">Gender</label>
+                    <select id="gender" class="w-full bg-slate-800 border border-slate-600 text-slate-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                         <option>Male</option>
                         <option>Female</option>
                         <option>Other</option>
@@ -44,8 +44,8 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Fitness Goal</label>
-                    <select class="w-full bg-slate-800 border border-slate-600 text-slate-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <label class="block text-sm font-semibold mb-2" for="goal">Fitness Goal</label>
+                    <select id="goal" class="w-full bg-slate-800 border border-slate-600 text-slate-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                         <option>Lose Fat</option>
                         <option>Build Muscle</option>
                         <option>Improve Fitness</option>
@@ -55,19 +55,19 @@
 
 
             <div>
-                <label class="block text-sm font-semibold mb-2">Email</label>
-                <input type="email" placeholder="name@example.com" class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <label class="block text-sm font-semibold mb-2" for="regEmail">Email</label>
+                <input type="email" id="regEmail" placeholder="name@example.com" required class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
             </div>
 
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Password</label>
-                    <input type="password" placeholder="••••••••" class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <label class="block text-sm font-semibold mb-2" for="regPassword">Password</label>
+                    <input type="password" id="regPassword" placeholder="••••••••" required minlength="6" class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Confirm Password</label>
-                    <input type="password" placeholder="••••••••" class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <label class="block text-sm font-semibold mb-2" for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="••••••••" required minlength="6" class="w-full bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                 </div>
             </div>
 

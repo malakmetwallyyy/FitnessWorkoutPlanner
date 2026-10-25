@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Fitness Planner</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100">
+    <header class="border-b border-slate-700 bg-slate-900">
+        <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 p-4" aria-label="Main navigation">
+            <a href="index.html" class="text-xl font-bold text-emerald-400"> Fitness Planner </a>
+
+            <div class="flex flex-wrap gap-4 text-sm">
+                <a href="index.html" aria-current="page" class="font-semibold text-emerald-400">Home</a>
+                <a href="dashboard.html" class="text-slate-300 hover:text-white">Dashboard</a>
+                <a href="workout.html" class="text-slate-300 hover:text-white">Workouts</a>
+                <a href="exercise-library.html" class="text-slate-300 hover:text-white">Exercise Library</a>
+                <a href="profile.html" class="text-slate-300 hover:text-white">Profile</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mx-auto max-w-7xl space-y-8 p-4 sm:p-6 lg:p-8">
+
+        <section>
+            <p class="mb-2 text-emerald-400">YOUR FITNESS JOURNEY</p>
+            <h1 class="text-3xl font-bold sm:text-4xl">
+                Welcome back, Haifa!
+            </h1>
+            <p class="mt-2 text-slate-400">
+                Keep going! Every workout brings you closer to your goal.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="mb-4 text-xl font-semibold">This Week</h2>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+
+                <article class="rounded-xl border border-slate-700 bg-slate-900 p-5">
+                    <p class="text-sm text-slate-400">Workouts Completed</p>
+                    <p class="mt-2 text-3xl font-bold">3</p>
+                    <p class="mt-1 text-sm text-slate-400">This week</p>
+                </article>
+
+                <article class="rounded-xl border border-slate-700 bg-slate-900 p-5">
+                    <p class="text-sm text-slate-400">Workout Duration</p>
+                    <p class="mt-2 text-3xl font-bold">135 min</p>
+                    <p class="mt-1 text-sm text-slate-400">Total this week</p>
+                </article>
+
+                <article class="rounded-xl border border-slate-700 bg-slate-900 p-5">
+                    <p class="text-sm text-slate-400">Current Streak</p>
+                    <p class="mt-2 text-3xl font-bold">10 days🔥</p>
+                    <p class="mt-1 text-sm text-slate-400">Keep it up!</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="rounded-2xl border border-slate-700 bg-slate-900 p-6">
+            <p class="text-sm font-semibold text-emerald-400">YOUR NEXT WORKOUT</p>
+            <h2 class="mt-2 text-2xl font-bold">Upper Body Workout</h2>
+            <p class="mt-2 text-slate-400">
+                Focus on chest, back, shoulders, and arms.
+            </p>
+
+            <div class="mt-4 flex flex-wrap gap-5 text-sm text-slate-300">
+                <p>Duration: 45 minutes</p>
+                <p>Exercises: 6</p>
+            </div>
+
+            <a href="workout.html"
+               class="mt-6 inline-block rounded-lg bg-emerald-500 px-5 py-3
+                      font-semibold text-emerald-950 hover:bg-emerald-400
+                      focus-visible:outline-2 focus-visible:outline-offset-2
+                      focus-visible:outline-emerald-400">
+                Start Workout
+            </a>
+        </section>
+
+        <section class="rounded-xl border border-slate-700 bg-slate-900 p-5">
+            <h2 class="text-xl font-semibold">Current Routine</h2>
+            <p class="mt-2 text-slate-400">
+                Push / Pull / Legs / Upper / Lower
+            </p>
+
+            <p class="mt-1 text-sm text-slate-400">
+                A weekly routine focused on strength and fitness.
+            </p>
+
+            <a href="workout.html"
+               class="mt-4 inline-block font-semibold text-emerald-400 hover:text-emerald-300">
+                View Workouts →
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="mt-12 border-t border-slate-700 py-8 text-sm text-slate-400">
+    <div class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-4 sm:flex-row">
+        <p>&copy; 2026 Fitness Planner. All rights reserved.</p>
+        
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="#" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-emerald-400 transition-colors">Terms of Service</a>
+            <a href="#" class="hover:text-emerald-400 transition-colors">Contact Us</a>
+        </div>
+    </div>
+    </footer>
+
+</body>
+</html>

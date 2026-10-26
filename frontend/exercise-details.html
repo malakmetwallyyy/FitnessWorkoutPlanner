@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Details | Fitness Planner</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <header class="border-b border-slate-700 bg-slate-900">
+      <nav
+        class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 p-4"
+        aria-label="Main navigation"
+      >
+        <a href="index.html" class="text-xl font-bold text-emerald-400">
+          Fitness Planner
+        </a>
+
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a href="index.html" class="text-slate-300 hover:text-white">Home</a>
+          <a href="dashboard.html" class="text-slate-300 hover:text-white"
+            >Dashboard</a
+          >
+          <a href="workout.html" class="text-slate-300 hover:text-white"
+            >Workouts</a
+          >
+          <a
+            href="exercise-library.html"
+            aria-current="page"
+            class="font-semibold text-emerald-400"
+            >Exercise Library</a
+          >
+          <a href="profile.html" class="text-slate-300 hover:text-white"
+            >Profile</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="group/d mx-auto max-w-4xl space-y-6 p-4 sm:p-6 lg:p-8">
+      <a
+        href="exercise-library.html"
+        class="inline-block rounded-lg border border-slate-600 px-4 py-3 text-slate-100 hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 py-3 text-sm"
+        >← Back to Library</a
+      >
+
+      <article
+        id="bench-press"
+        class="scroll-mt-40 space-y-6 rounded-2xl border border-slate-700 bg-slate-900 p-4 sm:p-6 group-has-[article:target]/d:[&:not(:target)]:hidden"
+      >
+        <div class="flex flex-col gap-6 md:flex-row md:items-center">
+          <div
+            class="h-48 w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 md:w-72 md:shrink-0"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
+              alt="Barbell Bench Press"
+              class="h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex-1 space-y-3">
+            <span
+              class="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/20 px-3 py-1 text-xs font-semibold text-emerald-400"
+              >Chest</span
+            >
+            <h1 class="text-3xl font-bold md:text-4xl">Barbell Bench Press</h1>
+
+            <dl class="grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+              <div>
+                <dt class="inline text-slate-400">Target muscles:</dt>
+                <dd class="inline font-semibold">
+                  Chest, front shoulders, triceps
+                </dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Equipment:</dt>
+                <dd class="inline font-semibold">Barbell, flat bench</dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Difficulty:</dt>
+                <dd class="inline font-semibold">Intermediate</dd>
+              </div>
+            </dl>
+
+            <div class="flex flex-wrap gap-3 pt-2">
+              <label
+                class="cursor-pointer rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-emerald-950 hover:bg-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">+ Add to Routine</span
+                ><span class="hidden peer-checked:inline"
+                  >✓ Added to Routine</span
+                >
+              </label>
+              <label
+                class="cursor-pointer rounded-lg border border-slate-600 px-4 py-3 text-slate-100 hover:bg-slate-800 has-[:checked]:border-emerald-500 has-[:checked]:text-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">🤍 Add to Favourites</span
+                ><span class="hidden peer-checked:inline"
+                  >❤️ In Favourites</span
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-slate-700" />
+
+        <section>
+          <h2 class="mb-3 text-xl font-semibold md:text-2xl">
+            Step-by-Step Instructions
+          </h2>
+          <ol
+            class="list-inside list-decimal space-y-2 text-sm text-slate-300 md:text-base"
+          >
+            <li>Lie back on a flat bench with your eyes under the bar.</li>
+            <li>Grip the bar slightly wider than shoulder-width.</li>
+            <li>Unrack the bar and lower it slowly to your mid-chest.</li>
+            <li>Press the bar back up to the starting position.</li>
+          </ol>
+        </section>
+
+        <section
+          class="rounded-xl border border-amber-500/40 bg-slate-800/60 p-4 sm:p-6"
+        >
+          <h2 class="mb-3 text-xl font-semibold text-amber-400 md:text-2xl">
+            ⚠️ Safety Tips &amp; Common Mistakes
+          </h2>
+          <ul
+            class="list-inside list-disc space-y-1 text-sm text-slate-300 md:text-base"
+          >
+            <li>Keep your feet firmly planted on the floor.</li>
+            <li>Do not bounce the bar off your chest.</li>
+            <li>Use a spotter when lifting heavy.</li>
+          </ul>
+        </section>
+      </article>
+
+      <article
+        id="pull-ups"
+        class="scroll-mt-40 space-y-6 rounded-2xl border border-slate-700 bg-slate-900 p-4 sm:p-6 hidden target:block"
+      >
+        <div class="flex flex-col gap-6 md:flex-row md:items-center">
+          <div
+            class="h-48 w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 md:w-72 md:shrink-0"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+              alt="Pull-Ups"
+              class="h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex-1 space-y-3">
+            <span
+              class="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/20 px-3 py-1 text-xs font-semibold text-emerald-400"
+              >Back</span
+            >
+            <h1 class="text-3xl font-bold md:text-4xl">Pull-Ups</h1>
+
+            <dl class="grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+              <div>
+                <dt class="inline text-slate-400">Target muscles:</dt>
+                <dd class="inline font-semibold">Lats, biceps, upper back</dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Equipment:</dt>
+                <dd class="inline font-semibold">Pull-up bar</dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Difficulty:</dt>
+                <dd class="inline font-semibold">Intermediate</dd>
+              </div>
+            </dl>
+
+            <div class="flex flex-wrap gap-3 pt-2">
+              <label
+                class="cursor-pointer rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-emerald-950 hover:bg-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">+ Add to Routine</span
+                ><span class="hidden peer-checked:inline"
+                  >✓ Added to Routine</span
+                >
+              </label>
+              <label
+                class="cursor-pointer rounded-lg border border-slate-600 px-4 py-3 text-slate-100 hover:bg-slate-800 has-[:checked]:border-emerald-500 has-[:checked]:text-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">🤍 Add to Favourites</span
+                ><span class="hidden peer-checked:inline"
+                  >❤️ In Favourites</span
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-slate-700" />
+
+        <section>
+          <h2 class="mb-3 text-xl font-semibold md:text-2xl">
+            Step-by-Step Instructions
+          </h2>
+          <ol
+            class="list-inside list-decimal space-y-2 text-sm text-slate-300 md:text-base"
+          >
+            <li>
+              Hang from the bar with an overhand grip, slightly wider than your
+              shoulders.
+            </li>
+            <li>Pull your shoulder blades down and back.</li>
+            <li>Pull yourself up until your chin clears the bar.</li>
+            <li>Lower yourself under control to a full hang.</li>
+          </ol>
+        </section>
+
+        <section
+          class="rounded-xl border border-amber-500/40 bg-slate-800/60 p-4 sm:p-6"
+        >
+          <h2 class="mb-3 text-xl font-semibold text-amber-400 md:text-2xl">
+            ⚠️ Safety Tips &amp; Common Mistakes
+          </h2>
+          <ul
+            class="list-inside list-disc space-y-1 text-sm text-slate-300 md:text-base"
+          >
+            <li>Avoid swinging or kicking your legs.</li>
+            <li>Do not shrug your shoulders up to your ears.</li>
+            <li>Use a resistance band if full reps are too hard.</li>
+          </ul>
+        </section>
+      </article>
+
+      <article
+        id="squats"
+        class="scroll-mt-40 space-y-6 rounded-2xl border border-slate-700 bg-slate-900 p-4 sm:p-6 hidden target:block"
+      >
+        <div class="flex flex-col gap-6 md:flex-row md:items-center">
+          <div
+            class="h-48 w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 md:w-72 md:shrink-0"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80"
+              alt="Barbell Squats"
+              class="h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex-1 space-y-3">
+            <span
+              class="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/20 px-3 py-1 text-xs font-semibold text-emerald-400"
+              >Legs</span
+            >
+            <h1 class="text-3xl font-bold md:text-4xl">Barbell Squats</h1>
+
+            <dl class="grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+              <div>
+                <dt class="inline text-slate-400">Target muscles:</dt>
+                <dd class="inline font-semibold">Quads, glutes, hamstrings</dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Equipment:</dt>
+                <dd class="inline font-semibold">Barbell, squat rack</dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Difficulty:</dt>
+                <dd class="inline font-semibold">Intermediate</dd>
+              </div>
+            </dl>
+
+            <div class="flex flex-wrap gap-3 pt-2">
+              <label
+                class="cursor-pointer rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-emerald-950 hover:bg-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">+ Add to Routine</span
+                ><span class="hidden peer-checked:inline"
+                  >✓ Added to Routine</span
+                >
+              </label>
+              <label
+                class="cursor-pointer rounded-lg border border-slate-600 px-4 py-3 text-slate-100 hover:bg-slate-800 has-[:checked]:border-emerald-500 has-[:checked]:text-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">🤍 Add to Favourites</span
+                ><span class="hidden peer-checked:inline"
+                  >❤️ In Favourites</span
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-slate-700" />
+
+        <section>
+          <h2 class="mb-3 text-xl font-semibold md:text-2xl">
+            Step-by-Step Instructions
+          </h2>
+          <ol
+            class="list-inside list-decimal space-y-2 text-sm text-slate-300 md:text-base"
+          >
+            <li>Set the bar on your upper back, feet shoulder-width apart.</li>
+            <li>Brace your core and push your hips back and down.</li>
+            <li>Descend until your thighs are parallel to the floor.</li>
+            <li>Drive through your heels to stand back up.</li>
+          </ol>
+        </section>
+
+        <section
+          class="rounded-xl border border-amber-500/40 bg-slate-800/60 p-4 sm:p-6"
+        >
+          <h2 class="mb-3 text-xl font-semibold text-amber-400 md:text-2xl">
+            ⚠️ Safety Tips &amp; Common Mistakes
+          </h2>
+          <ul
+            class="list-inside list-disc space-y-1 text-sm text-slate-300 md:text-base"
+          >
+            <li>Keep your knees tracking over your toes.</li>
+            <li>Keep your chest up and back neutral.</li>
+            <li>Set the safety bars at the right height.</li>
+          </ul>
+        </section>
+      </article>
+
+      <article
+        id="overhead-press"
+        class="scroll-mt-40 space-y-6 rounded-2xl border border-slate-700 bg-slate-900 p-4 sm:p-6 hidden target:block"
+      >
+        <div class="flex flex-col gap-6 md:flex-row md:items-center">
+          <div
+            class="h-48 w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 md:w-72 md:shrink-0"
+          >
+            <div
+              class="flex h-full w-full flex-col items-center justify-center gap-2 text-slate-400"
+            >
+              <span class="text-5xl" aria-hidden="true">🎬</span
+              ><span class="text-sm">Video placeholder</span>
+            </div>
+          </div>
+
+          <div class="flex-1 space-y-3">
+            <span
+              class="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/20 px-3 py-1 text-xs font-semibold text-emerald-400"
+              >Shoulders</span
+            >
+            <h1 class="text-3xl font-bold md:text-4xl">Overhead Press</h1>
+
+            <dl class="grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+              <div>
+                <dt class="inline text-slate-400">Target muscles:</dt>
+                <dd class="inline font-semibold">
+                  Shoulders, triceps, upper chest
+                </dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Equipment:</dt>
+                <dd class="inline font-semibold">Barbell or dumbbells</dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Difficulty:</dt>
+                <dd class="inline font-semibold">Intermediate</dd>
+              </div>
+            </dl>
+
+            <div class="flex flex-wrap gap-3 pt-2">
+              <label
+                class="cursor-pointer rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-emerald-950 hover:bg-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">+ Add to Routine</span
+                ><span class="hidden peer-checked:inline"
+                  >✓ Added to Routine</span
+                >
+              </label>
+              <label
+                class="cursor-pointer rounded-lg border border-slate-600 px-4 py-3 text-slate-100 hover:bg-slate-800 has-[:checked]:border-emerald-500 has-[:checked]:text-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">🤍 Add to Favourites</span
+                ><span class="hidden peer-checked:inline"
+                  >❤️ In Favourites</span
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-slate-700" />
+
+        <section>
+          <h2 class="mb-3 text-xl font-semibold md:text-2xl">
+            Step-by-Step Instructions
+          </h2>
+          <ol
+            class="list-inside list-decimal space-y-2 text-sm text-slate-300 md:text-base"
+          >
+            <li>
+              Hold the weight at shoulder height with your elbows slightly
+              forward.
+            </li>
+            <li>Squeeze your glutes and brace your core.</li>
+            <li>
+              Press the weight straight overhead until your arms lock out.
+            </li>
+            <li>Lower it back to your shoulders with control.</li>
+          </ol>
+        </section>
+
+        <section
+          class="rounded-xl border border-amber-500/40 bg-slate-800/60 p-4 sm:p-6"
+        >
+          <h2 class="mb-3 text-xl font-semibold text-amber-400 md:text-2xl">
+            ⚠️ Safety Tips &amp; Common Mistakes
+          </h2>
+          <ul
+            class="list-inside list-disc space-y-1 text-sm text-slate-300 md:text-base"
+          >
+            <li>Do not lean back excessively.</li>
+            <li>Keep your wrists straight and stacked over your elbows.</li>
+            <li>Start light to learn the movement.</li>
+          </ul>
+        </section>
+      </article>
+
+      <article
+        id="deadlift"
+        class="scroll-mt-40 space-y-6 rounded-2xl border border-slate-700 bg-slate-900 p-4 sm:p-6 hidden target:block"
+      >
+        <div class="flex flex-col gap-6 md:flex-row md:items-center">
+          <div
+            class="h-48 w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 md:w-72 md:shrink-0"
+          >
+            <div
+              class="flex h-full w-full flex-col items-center justify-center gap-2 text-slate-400"
+            >
+              <span class="text-5xl" aria-hidden="true">🎬</span
+              ><span class="text-sm">Video placeholder</span>
+            </div>
+          </div>
+
+          <div class="flex-1 space-y-3">
+            <span
+              class="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/20 px-3 py-1 text-xs font-semibold text-emerald-400"
+              >Back</span
+            >
+            <h1 class="text-3xl font-bold md:text-4xl">Deadlift</h1>
+
+            <dl class="grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+              <div>
+                <dt class="inline text-slate-400">Target muscles:</dt>
+                <dd class="inline font-semibold">
+                  Lower back, glutes, hamstrings
+                </dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Equipment:</dt>
+                <dd class="inline font-semibold">Barbell</dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Difficulty:</dt>
+                <dd class="inline font-semibold">Advanced</dd>
+              </div>
+            </dl>
+
+            <div class="flex flex-wrap gap-3 pt-2">
+              <label
+                class="cursor-pointer rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-emerald-950 hover:bg-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">+ Add to Routine</span
+                ><span class="hidden peer-checked:inline"
+                  >✓ Added to Routine</span
+                >
+              </label>
+              <label
+                class="cursor-pointer rounded-lg border border-slate-600 px-4 py-3 text-slate-100 hover:bg-slate-800 has-[:checked]:border-emerald-500 has-[:checked]:text-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">🤍 Add to Favourites</span
+                ><span class="hidden peer-checked:inline"
+                  >❤️ In Favourites</span
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-slate-700" />
+
+        <section>
+          <h2 class="mb-3 text-xl font-semibold md:text-2xl">
+            Step-by-Step Instructions
+          </h2>
+          <ol
+            class="list-inside list-decimal space-y-2 text-sm text-slate-300 md:text-base"
+          >
+            <li>Stand with the bar over mid-foot, feet hip-width apart.</li>
+            <li>Hinge at the hips and grip the bar just outside your legs.</li>
+            <li>Brace your core and push the floor away to stand up.</li>
+            <li>
+              Lower the bar by hinging at the hips, keeping it close to your
+              legs.
+            </li>
+          </ol>
+        </section>
+
+        <section
+          class="rounded-xl border border-amber-500/40 bg-slate-800/60 p-4 sm:p-6"
+        >
+          <h2 class="mb-3 text-xl font-semibold text-amber-400 md:text-2xl">
+            ⚠️ Safety Tips &amp; Common Mistakes
+          </h2>
+          <ul
+            class="list-inside list-disc space-y-1 text-sm text-slate-300 md:text-base"
+          >
+            <li>Never round your lower back.</li>
+            <li>Keep the bar close to your body.</li>
+            <li>Learn the form with light weight first.</li>
+          </ul>
+        </section>
+      </article>
+
+      <article
+        id="lateral-raise"
+        class="scroll-mt-40 space-y-6 rounded-2xl border border-slate-700 bg-slate-900 p-4 sm:p-6 hidden target:block"
+      >
+        <div class="flex flex-col gap-6 md:flex-row md:items-center">
+          <div
+            class="h-48 w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 md:w-72 md:shrink-0"
+          >
+            <div
+              class="flex h-full w-full flex-col items-center justify-center gap-2 text-slate-400"
+            >
+              <span class="text-5xl" aria-hidden="true">🎬</span
+              ><span class="text-sm">Video placeholder</span>
+            </div>
+          </div>
+
+          <div class="flex-1 space-y-3">
+            <span
+              class="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/20 px-3 py-1 text-xs font-semibold text-emerald-400"
+              >Shoulders</span
+            >
+            <h1 class="text-3xl font-bold md:text-4xl">
+              Dumbbell Lateral Raise
+            </h1>
+
+            <dl class="grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+              <div>
+                <dt class="inline text-slate-400">Target muscles:</dt>
+                <dd class="inline font-semibold">Side shoulders</dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Equipment:</dt>
+                <dd class="inline font-semibold">Dumbbells</dd>
+              </div>
+              <div>
+                <dt class="inline text-slate-400">Difficulty:</dt>
+                <dd class="inline font-semibold">Beginner</dd>
+              </div>
+            </dl>
+
+            <div class="flex flex-wrap gap-3 pt-2">
+              <label
+                class="cursor-pointer rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-emerald-950 hover:bg-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">+ Add to Routine</span
+                ><span class="hidden peer-checked:inline"
+                  >✓ Added to Routine</span
+                >
+              </label>
+              <label
+                class="cursor-pointer rounded-lg border border-slate-600 px-4 py-3 text-slate-100 hover:bg-slate-800 has-[:checked]:border-emerald-500 has-[:checked]:text-emerald-400 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input type="checkbox" class="peer sr-only" />
+                <span class="peer-checked:hidden">🤍 Add to Favourites</span
+                ><span class="hidden peer-checked:inline"
+                  >❤️ In Favourites</span
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-slate-700" />
+
+        <section>
+          <h2 class="mb-3 text-xl font-semibold md:text-2xl">
+            Step-by-Step Instructions
+          </h2>
+          <ol
+            class="list-inside list-decimal space-y-2 text-sm text-slate-300 md:text-base"
+          >
+            <li>Stand holding a dumbbell in each hand at your sides.</li>
+            <li>
+              With a slight bend in your elbows, raise your arms out to the
+              sides.
+            </li>
+            <li>Stop when your arms reach shoulder height.</li>
+            <li>Lower slowly back to your sides.</li>
+          </ol>
+        </section>
+
+        <section
+          class="rounded-xl border border-amber-500/40 bg-slate-800/60 p-4 sm:p-6"
+        >
+          <h2 class="mb-3 text-xl font-semibold text-amber-400 md:text-2xl">
+            ⚠️ Safety Tips &amp; Common Mistakes
+          </h2>
+          <ul
+            class="list-inside list-disc space-y-1 text-sm text-slate-300 md:text-base"
+          >
+            <li>Use a light weight and avoid swinging.</li>
+            <li>Do not raise above shoulder height.</li>
+            <li>Keep your shoulders relaxed, away from your ears.</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="mt-12 border-t border-slate-700 py-8 text-sm text-slate-400">
+      <div
+        class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-4 sm:flex-row"
+      >
+        <p>&copy; 2026 Fitness Planner. All rights reserved.</p>
+
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="#" class="hover:text-emerald-400 transition-colors"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-emerald-400 transition-colors"
+            >Terms of Service</a
+          >
+          <a href="#" class="hover:text-emerald-400 transition-colors"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

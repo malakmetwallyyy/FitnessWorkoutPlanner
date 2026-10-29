@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Library | Fitness Planner</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <header class="border-b border-slate-700 bg-slate-900">
+      <nav
+        class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 p-4"
+        aria-label="Main navigation"
+      >
+        <a href="index.html" class="text-xl font-bold text-emerald-400">
+          Fitness Planner
+        </a>
+
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a href="index.html" class="text-slate-300 hover:text-white">Home</a>
+          <a href="dashboard.html" class="text-slate-300 hover:text-white"
+            >Dashboard</a
+          >
+          <a href="workout.html" class="text-slate-300 hover:text-white"
+            >Workouts</a
+          >
+          <a
+            href="exercise-library.html"
+            aria-current="page"
+            class="font-semibold text-emerald-400"
+            >Exercise Library</a
+          >
+          <a href="profile.html" class="text-slate-300 hover:text-white"
+            >Profile</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="group/lib mx-auto max-w-7xl space-y-8 p-4 sm:p-6 lg:p-8">
+      <section
+        class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+      >
+        <div>
+          <p class="mb-2 text-emerald-400">DISCOVER</p>
+          <h1 class="text-3xl font-bold md:text-4xl">Exercise Library</h1>
+          <p class="mt-2 text-slate-400">
+            Search and filter exercises to build your next workout.
+          </p>
+        </div>
+
+        <label
+          class="cursor-pointer rounded-lg border border-slate-600 px-4 py-3 text-slate-100 hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-500 has-[:checked]:text-emerald-950"
+        >
+          <input type="checkbox" id="show-favs" class="peer sr-only" />
+          <span class="peer-checked:hidden">⭐ View Favourites</span
+          ><span class="hidden peer-checked:inline">⭐ Showing Favourites</span>
+        </label>
+      </section>
+
+      <section
+        class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between"
+      >
+        <form
+          role="search"
+          action="exercise-library.html"
+          method="get"
+          class="w-full lg:max-w-md"
+        >
+          <label for="search" class="sr-only">Search exercises</label>
+          <input
+            id="search"
+            type="search"
+            list="exercise-names"
+            placeholder="Search exercises (e.g., Bench Press)"
+            class="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          />
+          <datalist id="exercise-names">
+            <option value="Barbell Bench Press"></option>
+            <option value="Pull-Ups"></option>
+            <option value="Barbell Squats"></option>
+            <option value="Overhead Press"></option>
+            <option value="Deadlift"></option>
+            <option value="Dumbbell Lateral Raise"></option>
+          </datalist>
+        </form>
+
+        <div
+          class="flex flex-wrap gap-2"
+          role="radiogroup"
+          aria-label="Filter by muscle group"
+        >
+          <label
+            class="cursor-pointer rounded-lg border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-300 hover:bg-slate-800 hover:text-white has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-500 has-[:checked]:text-emerald-950 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+          >
+            <input
+              type="radio"
+              name="muscle"
+              id="f-all"
+              class="sr-only"
+              checked
+            />All
+          </label>
+          <label
+            class="cursor-pointer rounded-lg border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-300 hover:bg-slate-800 hover:text-white has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-500 has-[:checked]:text-emerald-950 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+          >
+            <input
+              type="radio"
+              name="muscle"
+              id="f-chest"
+              class="sr-only"
+            />Chest
+          </label>
+          <label
+            class="cursor-pointer rounded-lg border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-300 hover:bg-slate-800 hover:text-white has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-500 has-[:checked]:text-emerald-950 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+          >
+            <input type="radio" name="muscle" id="f-back" class="sr-only" />Back
+          </label>
+          <label
+            class="cursor-pointer rounded-lg border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-300 hover:bg-slate-800 hover:text-white has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-500 has-[:checked]:text-emerald-950 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+          >
+            <input type="radio" name="muscle" id="f-legs" class="sr-only" />Legs
+          </label>
+          <label
+            class="cursor-pointer rounded-lg border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-300 hover:bg-slate-800 hover:text-white has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-500 has-[:checked]:text-emerald-950 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-emerald-400"
+          >
+            <input
+              type="radio"
+              name="muscle"
+              id="f-shoulders"
+              class="sr-only"
+            />Shoulders
+          </label>
+        </div>
+      </section>
+
+      <section
+        class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        aria-label="Exercises"
+      >
+        <article
+          class="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 transition-colors hover:border-emerald-500 group-has-[#f-back:checked]/lib:hidden group-has-[#f-legs:checked]/lib:hidden group-has-[#f-shoulders:checked]/lib:hidden group-has-[#show-favs:checked]/lib:[&:not(:has(.fav:checked))]:hidden"
+        >
+          <div>
+            <div class="relative h-48 bg-slate-800">
+              <img
+                src="./media/img1.jpeg"
+                alt="Barbell Bench Press"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <span
+                class="absolute right-3 top-3 rounded-full border border-slate-700 bg-slate-950/80 px-3 py-1 text-xs font-semibold text-emerald-400"
+                >Chest</span
+              >
+              <label
+                class="absolute left-3 top-3 cursor-pointer rounded-full border border-slate-700 bg-slate-950/80 px-2.5 py-1.5 text-lg hover:bg-slate-800 has-[:checked]:bg-emerald-500 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input
+                  type="checkbox"
+                  id="fav-bench-press"
+                  class="fav peer sr-only"
+                  aria-label="Favourite Barbell Bench Press"
+                />
+                <span class="peer-checked:hidden" aria-hidden="true">🤍</span
+                ><span class="hidden peer-checked:inline" aria-hidden="true"
+                  >❤️</span
+                >
+              </label>
+            </div>
+            <div class="space-y-1 p-4 sm:p-6">
+              <h2 class="text-base font-semibold md:text-lg">
+                Barbell Bench Press
+              </h2>
+              <p class="text-sm text-slate-400">
+                Target: Chest, front shoulders, triceps
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0 sm:p-6 sm:pt-0">
+            <a
+              href="exercise-details.html#bench-press"
+              class="block w-full rounded-lg bg-emerald-500 px-4 py-3 text-center font-semibold text-emerald-950 hover:bg-emerald-400"
+              >View Details</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 transition-colors hover:border-emerald-500 group-has-[#f-chest:checked]/lib:hidden group-has-[#f-legs:checked]/lib:hidden group-has-[#f-shoulders:checked]/lib:hidden group-has-[#show-favs:checked]/lib:[&:not(:has(.fav:checked))]:hidden"
+        >
+          <div>
+            <div class="relative h-48 bg-slate-800">
+              <img
+                src="./media/img2.jpeg"
+                alt="Pull-Ups"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <span
+                class="absolute right-3 top-3 rounded-full border border-slate-700 bg-slate-950/80 px-3 py-1 text-xs font-semibold text-emerald-400"
+                >Back</span
+              >
+              <label
+                class="absolute left-3 top-3 cursor-pointer rounded-full border border-slate-700 bg-slate-950/80 px-2.5 py-1.5 text-lg hover:bg-slate-800 has-[:checked]:bg-emerald-500 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input
+                  type="checkbox"
+                  id="fav-pull-ups"
+                  class="fav peer sr-only"
+                  aria-label="Favourite Pull-Ups"
+                />
+                <span class="peer-checked:hidden" aria-hidden="true">🤍</span
+                ><span class="hidden peer-checked:inline" aria-hidden="true"
+                  >❤️</span
+                >
+              </label>
+            </div>
+            <div class="space-y-1 p-4 sm:p-6">
+              <h2 class="text-base font-semibold md:text-lg">Pull-Ups</h2>
+              <p class="text-sm text-slate-400">
+                Target: Lats, biceps, upper back
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0 sm:p-6 sm:pt-0">
+            <a
+              href="exercise-details.html#pull-ups"
+              class="block w-full rounded-lg bg-emerald-500 px-4 py-3 text-center font-semibold text-emerald-950 hover:bg-emerald-400"
+              >View Details</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 transition-colors hover:border-emerald-500 group-has-[#f-chest:checked]/lib:hidden group-has-[#f-back:checked]/lib:hidden group-has-[#f-shoulders:checked]/lib:hidden group-has-[#show-favs:checked]/lib:[&:not(:has(.fav:checked))]:hidden"
+        >
+          <div>
+            <div class="relative h-48 bg-slate-800">
+              <img
+                src="./media/img3.jpeg"
+                alt="Barbell Squats"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <span
+                class="absolute right-3 top-3 rounded-full border border-slate-700 bg-slate-950/80 px-3 py-1 text-xs font-semibold text-emerald-400"
+                >Legs</span
+              >
+              <label
+                class="absolute left-3 top-3 cursor-pointer rounded-full border border-slate-700 bg-slate-950/80 px-2.5 py-1.5 text-lg hover:bg-slate-800 has-[:checked]:bg-emerald-500 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input
+                  type="checkbox"
+                  id="fav-squats"
+                  class="fav peer sr-only"
+                  aria-label="Favourite Barbell Squats"
+                />
+                <span class="peer-checked:hidden" aria-hidden="true">🤍</span
+                ><span class="hidden peer-checked:inline" aria-hidden="true"
+                  >❤️</span
+                >
+              </label>
+            </div>
+            <div class="space-y-1 p-4 sm:p-6">
+              <h2 class="text-base font-semibold md:text-lg">Barbell Squats</h2>
+              <p class="text-sm text-slate-400">
+                Target: Quads, glutes, hamstrings
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0 sm:p-6 sm:pt-0">
+            <a
+              href="exercise-details.html#squats"
+              class="block w-full rounded-lg bg-emerald-500 px-4 py-3 text-center font-semibold text-emerald-950 hover:bg-emerald-400"
+              >View Details</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 transition-colors hover:border-emerald-500 group-has-[#f-chest:checked]/lib:hidden group-has-[#f-back:checked]/lib:hidden group-has-[#f-legs:checked]/lib:hidden group-has-[#show-favs:checked]/lib:[&:not(:has(.fav:checked))]:hidden"
+        >
+          <div>
+            <div class="relative h-48 bg-slate-800">
+              <div
+                class="flex h-full w-full items-center justify-center text-5xl"
+                aria-hidden="true"
+              >
+                <img
+                src="./media/img4.jpeg"
+                alt="Barbell Squats"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              </div>
+              <span
+                class="absolute right-3 top-3 rounded-full border border-slate-700 bg-slate-950/80 px-3 py-1 text-xs font-semibold text-emerald-400"
+                >Shoulders</span
+              >
+              <label
+                class="absolute left-3 top-3 cursor-pointer rounded-full border border-slate-700 bg-slate-950/80 px-2.5 py-1.5 text-lg hover:bg-slate-800 has-[:checked]:bg-emerald-500 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input
+                  type="checkbox"
+                  id="fav-overhead-press"
+                  class="fav peer sr-only"
+                  aria-label="Favourite Overhead Press"
+                />
+                <span class="peer-checked:hidden" aria-hidden="true">🤍</span
+                ><span class="hidden peer-checked:inline" aria-hidden="true"
+                  >❤️</span
+                >
+              </label>
+            </div>
+            <div class="space-y-1 p-4 sm:p-6">
+              <h2 class="text-base font-semibold md:text-lg">Overhead Press</h2>
+              <p class="text-sm text-slate-400">
+                Target: Shoulders, triceps, upper chest
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0 sm:p-6 sm:pt-0">
+            <a
+              href="exercise-details.html#overhead-press"
+              class="block w-full rounded-lg bg-emerald-500 px-4 py-3 text-center font-semibold text-emerald-950 hover:bg-emerald-400"
+              >View Details</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 transition-colors hover:border-emerald-500 group-has-[#f-chest:checked]/lib:hidden group-has-[#f-legs:checked]/lib:hidden group-has-[#f-shoulders:checked]/lib:hidden group-has-[#show-favs:checked]/lib:[&:not(:has(.fav:checked))]:hidden"
+        >
+          <div>
+            <div class="relative h-48 bg-slate-800">
+              <div
+                class="flex h-full w-full items-center justify-center text-5xl"
+                aria-hidden="true"
+              >
+                <img
+                src="./media/img5.jpeg"
+                alt="Barbell Squats"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              </div>
+              <span
+                class="absolute right-3 top-3 rounded-full border border-slate-700 bg-slate-950/80 px-3 py-1 text-xs font-semibold text-emerald-400"
+                >Back</span
+              >
+              <label
+                class="absolute left-3 top-3 cursor-pointer rounded-full border border-slate-700 bg-slate-950/80 px-2.5 py-1.5 text-lg hover:bg-slate-800 has-[:checked]:bg-emerald-500 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input
+                  type="checkbox"
+                  id="fav-deadlift"
+                  class="fav peer sr-only"
+                  aria-label="Favourite Deadlift"
+                />
+                <span class="peer-checked:hidden" aria-hidden="true">🤍</span
+                ><span class="hidden peer-checked:inline" aria-hidden="true"
+                  >❤️</span
+                >
+              </label>
+            </div>
+            <div class="space-y-1 p-4 sm:p-6">
+              <h2 class="text-base font-semibold md:text-lg">Deadlift</h2>
+              <p class="text-sm text-slate-400">
+                Target: Lower back, glutes, hamstrings
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0 sm:p-6 sm:pt-0">
+            <a
+              href="exercise-details.html#deadlift"
+              class="block w-full rounded-lg bg-emerald-500 px-4 py-3 text-center font-semibold text-emerald-950 hover:bg-emerald-400"
+              >View Details</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 transition-colors hover:border-emerald-500 group-has-[#f-chest:checked]/lib:hidden group-has-[#f-back:checked]/lib:hidden group-has-[#f-legs:checked]/lib:hidden group-has-[#show-favs:checked]/lib:[&:not(:has(.fav:checked))]:hidden"
+        >
+          <div>
+            <div class="relative h-48 bg-slate-800">
+              <div
+                class="flex h-full w-full items-center justify-center text-5xl"
+                aria-hidden="true"
+              >
+                <img
+                src="./media/img1.jpeg"
+                alt="Barbell Squats"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              </div>
+              <span
+                class="absolute right-3 top-3 rounded-full border border-slate-700 bg-slate-950/80 px-3 py-1 text-xs font-semibold text-emerald-400"
+                >Shoulders</span
+              >
+              <label
+                class="absolute left-3 top-3 cursor-pointer rounded-full border border-slate-700 bg-slate-950/80 px-2.5 py-1.5 text-lg hover:bg-slate-800 has-[:checked]:bg-emerald-500 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-emerald-400"
+              >
+                <input
+                  type="checkbox"
+                  id="fav-lateral-raise"
+                  class="fav peer sr-only"
+                  aria-label="Favourite Dumbbell Lateral Raise"
+                />
+                <span class="peer-checked:hidden" aria-hidden="true">🤍</span
+                ><span class="hidden peer-checked:inline" aria-hidden="true"
+                  >❤️</span
+                >
+              </label>
+            </div>
+            <div class="space-y-1 p-4 sm:p-6">
+              <h2 class="text-base font-semibold md:text-lg">
+                Dumbbell Lateral Raise
+              </h2>
+              <p class="text-sm text-slate-400">Target: Side shoulders</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0 sm:p-6 sm:pt-0">
+            <a
+              href="exercise-details.html#lateral-raise"
+              class="block w-full rounded-lg bg-emerald-500 px-4 py-3 text-center font-semibold text-emerald-950 hover:bg-emerald-400"
+              >View Details</a
+            >
+          </div>
+        </article>
+
+        <p
+          class="hidden rounded-xl border border-slate-700 bg-slate-900 p-6 text-center text-slate-400 group-has-[#show-favs:checked]/lib:block group-has-[.fav:checked]/lib:!hidden sm:col-span-2 lg:col-span-3"
+        >
+          No favourites yet. Tap the heart on an exercise to save it.
+        </p>
+      </section>
+    </main>
+
+    <footer class="mt-12 border-t border-slate-700 py-8 text-sm text-slate-400">
+      <div
+        class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-4 sm:flex-row"
+      >
+        <p>&copy; 2026 Fitness Planner. All rights reserved.</p>
+
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="#" class="hover:text-emerald-400 transition-colors"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-emerald-400 transition-colors"
+            >Terms of Service</a
+          >
+          <a href="#" class="hover:text-emerald-400 transition-colors"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

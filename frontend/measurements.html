@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measurements | Fitness Planner</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <header class="border-b border-slate-700 bg-slate-900">
+      <nav
+        class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 p-4"
+        aria-label="Main navigation"
+      >
+        <a href="index.html" class="text-xl font-bold text-emerald-400">
+          Fitness Planner
+        </a>
+
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a href="index.html" class="text-slate-300 hover:text-white">Home</a>
+          <a href="dashboard.html" class="text-slate-300 hover:text-white"
+            >Dashboard</a
+          >
+          <a href="workout.html" class="text-slate-300 hover:text-white"
+            >Workouts</a
+          >
+          <a
+            href="exercise-library.html"
+            class="text-slate-300 hover:text-white"
+            >Exercise Library</a
+          >
+          <a
+            href="profile.html"
+            aria-current="page"
+            class="font-semibold text-emerald-400"
+            >Profile</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-4xl space-y-8 p-4 sm:p-6 lg:p-8">
+      <section
+        class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+      >
+        <div>
+          <p class="mb-2 text-emerald-400">TRACK YOUR PROGRESS</p>
+          <h1 class="text-3xl font-bold md:text-4xl">Body Measurements</h1>
+          <p class="mt-2 text-slate-400">
+            Record your weight, body measurements, and daily calories over time.
+          </p>
+        </div>
+        <a
+          href="profile.html"
+          class="rounded-lg border border-slate-600 px-4 py-3 text-slate-100 hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 text-center"
+          >← Back to Profile</a
+        >
+      </section>
+
+      <p
+        id="saved"
+        class="hidden rounded-xl border border-emerald-500/40 bg-emerald-500/10 p-4 text-sm text-emerald-400 target:block"
+        role="status"
+      >
+        Measurement submitted. (Prototype: nothing is stored until the backend
+        is added.)
+      </p>
+
+      <section
+        class="rounded-2xl border border-slate-700 bg-slate-900 p-4 sm:p-6"
+      >
+        <h2 class="mb-6 text-xl font-semibold md:text-2xl">
+          Log New Measurement
+        </h2>
+
+        <form action="measurements.html#saved" method="get" class="space-y-4">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div class="space-y-2">
+              <label for="weight" class="text-sm text-slate-400"
+                >Weight (kg) <span class="text-red-400">*</span></label
+              >
+              <input
+                id="weight"
+                type="number"
+                step="0.1"
+                min="0"
+                required
+                placeholder="e.g. 78.5"
+                class="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="height" class="text-sm text-slate-400"
+                >Height (cm)</label
+              >
+              <input
+                id="height"
+                type="number"
+                min="0"
+                placeholder="e.g. 178"
+                class="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="waist" class="text-sm text-slate-400"
+                >Waist (cm)</label
+              >
+              <input
+                id="waist"
+                type="number"
+                step="0.1"
+                min="0"
+                placeholder="e.g. 82"
+                class="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="chest" class="text-sm text-slate-400"
+                >Chest (cm)</label
+              >
+              <input
+                id="chest"
+                type="number"
+                step="0.1"
+                min="0"
+                placeholder="e.g. 100"
+                class="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="calories" class="text-sm text-slate-400"
+                >Daily Calorie Intake (kcal)</label
+              >
+              <input
+                id="calories"
+                type="number"
+                min="0"
+                placeholder="e.g. 2400"
+                class="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="date" class="text-sm text-slate-400"
+                >Date of measurement <span class="text-red-400">*</span></label
+              >
+              <input
+                id="date"
+                type="date"
+                value="2026-10-24"
+                required
+                class="w-full rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-emerald-950 hover:bg-emerald-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400"
+          >
+            Save Measurement
+          </button>
+        </form>
+      </section>
+
+      <section
+        class="rounded-2xl border border-slate-700 bg-slate-900 p-4 sm:p-6"
+      >
+        <h2 class="mb-4 text-xl font-semibold md:text-2xl">
+          Previous Measurements
+        </h2>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse text-left text-sm">
+            <thead>
+              <tr class="border-b border-slate-700 text-slate-400">
+                <th scope="col" class="px-4 py-3 font-medium">Date</th>
+                <th scope="col" class="px-4 py-3 font-medium">Weight</th>
+                <th scope="col" class="px-4 py-3 font-medium">Height</th>
+                <th scope="col" class="px-4 py-3 font-medium">Waist</th>
+                <th scope="col" class="px-4 py-3 font-medium">Chest</th>
+                <th scope="col" class="px-4 py-3 font-medium">Calories</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-700">
+              <tr class="hover:bg-slate-800/50">
+                <td class="px-4 py-3 font-medium text-emerald-400">
+                  2026-10-15
+                </td>
+                <td class="px-4 py-3">78.5 kg</td>
+                <td class="px-4 py-3">178 cm</td>
+                <td class="px-4 py-3">82 cm</td>
+                <td class="px-4 py-3">100 cm</td>
+                <td class="px-4 py-3">2400 kcal</td>
+              </tr>
+              <tr class="hover:bg-slate-800/50">
+                <td class="px-4 py-3 font-medium text-emerald-400">
+                  2026-10-01
+                </td>
+                <td class="px-4 py-3">79.2 kg</td>
+                <td class="px-4 py-3">178 cm</td>
+                <td class="px-4 py-3">84 cm</td>
+                <td class="px-4 py-3">99 cm</td>
+                <td class="px-4 py-3">2500 kcal</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-12 border-t border-slate-700 py-8 text-sm text-slate-400">
+      <div
+        class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-4 sm:flex-row"
+      >
+        <p>&copy; 2026 Fitness Planner. All rights reserved.</p>
+
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="#" class="hover:text-emerald-400 transition-colors"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-emerald-400 transition-colors"
+            >Terms of Service</a
+          >
+          <a href="#" class="hover:text-emerald-400 transition-colors"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

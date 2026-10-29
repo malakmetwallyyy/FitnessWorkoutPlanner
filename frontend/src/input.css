@@ -1,17 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Team design system reference (see docs/design-system.md):
-   navy #0B1220 | cards #111C2E | inputs #1E293B | emerald #10B981
-   text #F8FAFC | secondary text #94A3B8 | borders #334155 */
+/* Team design system reference:
+   navy #0B1220 | cards #111C2E | inputs #1E293B
+   emerald #10B981 | text #F8FAFC
+   secondary text #94A3B8 | borders #334155 */
 
 body {
-  font-family:
-    "Inter",
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    sans-serif;
+  font-family: "Inter", ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", sans-serif;
 }

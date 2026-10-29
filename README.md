@@ -85,6 +85,12 @@ The project includes HTML pages for the main application sections and a shared T
 
 The current prototype focuses on the user interface. Features such as saving workout data, authentication, and persistent profile updates may require additional JavaScript and backend implementation.
 
+## UI/UX Design
+
+The UI/UX design and wireframes for the Fitness & Workout Planner were created using Figma.
+
+[View Figma Design](https://www.figma.com/make/bKcGDnDMRCkYMR5HI5lGav/Fitness-Workout-Planner-UI?p=f&t=FjZDvHs9df5HIZQs-0&preview-route=%2Flogin)
+
 ## Documentation
 
 Project documentation, wireframes, mockups, design-system references, reports, and other deliverables are maintained in the `docs/` directory as they become available.
